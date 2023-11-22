@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    min-height: 100vh;
+}
+
+.contaner{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+ } 
+ .contaner span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 145px;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg / 50)));
+animation: anim1 3s infinite linear;
+animation-delay: calc(var(--i)*(3s /50));
+ }
+@keyframes anim1 {
+0%{ background:#0ef;}
+25%{
+    background: #2c4766;
+
+}
+}
+.login-box {
+    position: absolute;
+    width: 400px;
+    /* background-color:red ; */
+}
+
+.login-box form {
+    width: 80%;
+    padding: 0px 40px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #0ef;
+    text-align: center;
+}
+
+.inputbox {
+    position: relative;
+    margin: 25px 0;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 0 20px;
+    border-radius: 40px;
+    transition: .5s;
+}
+.inputbox input:focus,
+.inputbox input:valid {
+border-color: #0ef;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translatey(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label {
+    top: 1px;
+    font-size: .8em;
+    background-color: #333;
+    padding: 0 6px;
+    color: #0ef;
+}
+
+.forget-pass {
+    margin: -15px 0 10px;
+    text-align: center;
+    margin-left: 25px;
+
+}
+
+.forget-pass a {
+    color: #fff;
+    font-size: .85em;
+    text-decoration: none;
+
+}
+
+.forget-pass a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-left: 25px;
+
+}
+
+.singup-link {
+    margin: 20px 0 10px;
+    text-align: center;
+    margin-left: 45px;
+
+}
+
+.singup-link a {
+    font-size: 1em;
+    color: #0ef;
+    text-decoration: none;
+}
+
+.singup-link a:hover {
+    text-decoration: underline;
+}
